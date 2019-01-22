@@ -1,7 +1,7 @@
-function generateQuads(columns, rows, quadWidth, quadHeight)
+function generateQuads(columns, rows, quadWidth, quadHeight, sheetWidth, sheetHeight)
   local quads = {}
-  local sheetWidth = columns*quadWidth
-  local sheetHeight = rows*quadHeight
+  local sheetWidth = sheetWidth or columns*quadWidth
+  local sheetHeight = sheetHeight or rows*quadHeight
 
   for currentRow=0,rows-1 do
     for currentColumn=0,columns-1 do
